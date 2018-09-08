@@ -1,0 +1,77 @@
+http://www.probusca.com [301 Moved Permanently] 
+Apache[2.4.18], 
+Country[UNITED STATES][US], 
+HTTPServer[Ubuntu Linux][Apache/2.4.18 (Ubuntu)], 
+IP[54.94.171.46], 
+RedirectLocation[https://www.probusca.com/], 
+Title[301 Moved Permanently]
+https://www.probusca.com/ [301 Moved Permanently] 
+Apache[2.4.18], 
+Country[UNITED STATES][US], 
+HTTPServer[Ubuntu Linux][Apache/2.4.18 (Ubuntu)], 
+IP[54.94.171.46], 
+RedirectLocation[https://probusca.com/], 
+Title[301 Moved Permanently]
+https://probusca.com/ [200 OK] 
+Apache[2.4.18], 
+Country[UNITED STATES][US], 
+HTML5, HTTPServer[Ubuntu Linux][Apache/2.4.18 (Ubuntu)], 
+IP[54.94.171.46], PasswordField[senha], 
+Script[text/javascript], Title[PROBusca]
+
+┌─[✗]─[user@parrot]─[~]
+└──╼ $sudo nikto -h www.probusca.com
+- Nikto v2.1.6
+---------------------------------------------------------------------------
++ Target IP:          54.94.171.46
++ Target Hostname:    www.probusca.com
++ Target Port:        80
++ Start Time:         2018-09-08 23:22:43 (GMT0)
+---------------------------------------------------------------------------
++ Server: Apache/2.4.18 (Ubuntu)
++ The anti-clickjacking X-Frame-Options header is not present.
++ The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS
++ The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type
++ Root page / redirects to: https://www.probusca.com/
++ No CGI Directories found (use '-C all' to force check all possible dirs)
+^[[A
++ ERROR: Error limit (20) reached for host, giving up. Last error: opening stream: can't connect (timeout): Operation now in progress
++ Scan terminated:  20 error(s) and 3 item(s) reported on remote host
++ End Time:           2018-09-08 23:37:00 (GMT0) (857 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
+
+
+      *********************************************************************
+      Portions of the server's headers (Apache/2.4.18) are not in
+      the Nikto database or are newer than the known string. Would you like
+      to submit this information (*no server specific data*) to CIRT.net
+      for a Nikto update (or you may email to sullo@cirt.net) (y/n)? y
+
++ The anti-clickjacking X-Frame-Options header is not present.
++ The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS
++ The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type
++ ERROR 302: Update failed, please notify sullo@cirt.net of this code.
+
+┌─[✗]─[root@parrot]─[/home/user]
+└──╼ #wpscan --url www.probusca.com --random-agent
+_______________________________________________________________
+        __          _______   _____                  
+        \ \        / /  __ \ / ____|                 
+         \ \  /\  / /| |__) | (___   ___  __ _ _ __ ®
+          \ \/  \/ / |  ___/ \___ \ / __|/ _` | '_ \ 
+           \  /\  /  | |     ____) | (__| (_| | | | |
+            \/  \/   |_|    |_____/ \___|\__,_|_| |_|
+
+        WordPress Security Scanner by the WPScan Team 
+                       Version 2.9.4
+          Sponsored by Sucuri - https://sucuri.net
+      @_WPScan_, @ethicalhack3r, @erwan_lr, @_FireFart_
+_______________________________________________________________
+
+[+] User-Agent: Mozilla/5.0 (X11; Linux i686; rv:12.0) Gecko/20100101 Firefox/12.0
+
+[!] The WordPress URL supplied 'http://www.probusca.com/' seems to be down. Maybe the site is blocking the user-agent?
+
+
+
